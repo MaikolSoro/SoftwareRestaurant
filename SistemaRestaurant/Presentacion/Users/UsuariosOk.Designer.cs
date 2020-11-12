@@ -1,0 +1,813 @@
+﻿namespace RestCsharp.Presentacion.Usuarios
+{
+    partial class UsuariosOk
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelregistro = new System.Windows.Forms.Panel();
+            this.panelIcono = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblanuncioIcono = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.datalistadoPermisos = new System.Windows.Forms.DataGridView();
+            this.Marcar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.cbxRol = new System.Windows.Forms.ComboBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.datalistadoUsuarios = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnVolverIcono = new System.Windows.Forms.Button();
+            this.AgregarIcono = new System.Windows.Forms.PictureBox();
+            this.p8 = new System.Windows.Forms.PictureBox();
+            this.p7 = new System.Windows.Forms.PictureBox();
+            this.p6 = new System.Windows.Forms.PictureBox();
+            this.p5 = new System.Windows.Forms.PictureBox();
+            this.p4 = new System.Windows.Forms.PictureBox();
+            this.p3 = new System.Windows.Forms.PictureBox();
+            this.p2 = new System.Windows.Forms.PictureBox();
+            this.p1 = new System.Windows.Forms.PictureBox();
+            this.Icono = new System.Windows.Forms.PictureBox();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
+            this.btnagregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panelregistro.SuspendLayout();
+            this.panelIcono.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoPermisos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIcono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1679, 128);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtbuscar);
+            this.panel4.Controls.Add(this.btnagregar);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 42);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1679, 86);
+            this.panel4.TabIndex = 6;
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbuscar.Location = new System.Drawing.Point(16, 31);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(345, 23);
+            this.txtbuscar.TabIndex = 2;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(198)))), ((int)(((byte)(91)))));
+            this.panel3.Location = new System.Drawing.Point(16, 62);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(349, 2);
+            this.panel3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(198)))), ((int)(((byte)(91)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1679, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Usuarios";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelregistro
+            // 
+            this.panelregistro.Controls.Add(this.panelIcono);
+            this.panelregistro.Controls.Add(this.lblanuncioIcono);
+            this.panelregistro.Controls.Add(this.Icono);
+            this.panelregistro.Controls.Add(this.flowLayoutPanel1);
+            this.panelregistro.Controls.Add(this.panel5);
+            this.panelregistro.Controls.Add(this.Label12);
+            this.panelregistro.Controls.Add(this.Label11);
+            this.panelregistro.Controls.Add(this.cbxRol);
+            this.panelregistro.Controls.Add(this.txtcorreo);
+            this.panelregistro.Controls.Add(this.txtcontraseña);
+            this.panelregistro.Controls.Add(this.txtusuario);
+            this.panelregistro.Controls.Add(this.txtnombre);
+            this.panelregistro.Controls.Add(this.label6);
+            this.panelregistro.Controls.Add(this.label5);
+            this.panelregistro.Controls.Add(this.label3);
+            this.panelregistro.Controls.Add(this.label7);
+            this.panelregistro.Controls.Add(this.label4);
+            this.panelregistro.Controls.Add(this.label2);
+            this.panelregistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelregistro.Location = new System.Drawing.Point(97, 135);
+            this.panelregistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelregistro.Name = "panelregistro";
+            this.panelregistro.Size = new System.Drawing.Size(1444, 730);
+            this.panelregistro.TabIndex = 0;
+            this.panelregistro.Visible = false;
+            // 
+            // panelIcono
+            // 
+            this.panelIcono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panelIcono.Controls.Add(this.btnVolverIcono);
+            this.panelIcono.Controls.Add(this.AgregarIcono);
+            this.panelIcono.Controls.Add(this.flowLayoutPanel2);
+            this.panelIcono.Controls.Add(this.flowLayoutPanel3);
+            this.panelIcono.Location = new System.Drawing.Point(836, 70);
+            this.panelIcono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelIcono.Name = "panelIcono";
+            this.panelIcono.Size = new System.Drawing.Size(277, 572);
+            this.panelIcono.TabIndex = 617;
+            this.panelIcono.Visible = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.p8);
+            this.flowLayoutPanel2.Controls.Add(this.p7);
+            this.flowLayoutPanel2.Controls.Add(this.p6);
+            this.flowLayoutPanel2.Controls.Add(this.p5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(33, 33);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(908, 198);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.p4);
+            this.flowLayoutPanel3.Controls.Add(this.p3);
+            this.flowLayoutPanel3.Controls.Add(this.p2);
+            this.flowLayoutPanel3.Controls.Add(this.p1);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(33, 263);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(855, 198);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // lblanuncioIcono
+            // 
+            this.lblanuncioIcono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblanuncioIcono.ForeColor = System.Drawing.Color.White;
+            this.lblanuncioIcono.Location = new System.Drawing.Point(603, 17);
+            this.lblanuncioIcono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblanuncioIcono.Name = "lblanuncioIcono";
+            this.lblanuncioIcono.Size = new System.Drawing.Size(225, 186);
+            this.lblanuncioIcono.TabIndex = 616;
+            this.lblanuncioIcono.Text = "Elije un Icono";
+            this.lblanuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblanuncioIcono.Click += new System.EventHandler(this.lblanuncioIcono_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnguardar);
+            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
+            this.flowLayoutPanel1.Controls.Add(this.btnvolver);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(167, 574);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(496, 69);
+            this.flowLayoutPanel1.TabIndex = 614;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.datalistadoPermisos);
+            this.panel5.Location = new System.Drawing.Point(171, 319);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(424, 247);
+            this.panel5.TabIndex = 613;
+            // 
+            // datalistadoPermisos
+            // 
+            this.datalistadoPermisos.AllowUserToAddRows = false;
+            this.datalistadoPermisos.AllowUserToDeleteRows = false;
+            this.datalistadoPermisos.AllowUserToResizeRows = false;
+            this.datalistadoPermisos.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoPermisos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoPermisos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoPermisos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Marcar});
+            this.datalistadoPermisos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoPermisos.EnableHeadersVisualStyles = false;
+            this.datalistadoPermisos.Location = new System.Drawing.Point(0, 0);
+            this.datalistadoPermisos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datalistadoPermisos.Name = "datalistadoPermisos";
+            this.datalistadoPermisos.RowHeadersVisible = false;
+            this.datalistadoPermisos.RowHeadersWidth = 51;
+            this.datalistadoPermisos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadoPermisos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadoPermisos.RowTemplate.Height = 30;
+            this.datalistadoPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoPermisos.Size = new System.Drawing.Size(424, 247);
+            this.datalistadoPermisos.TabIndex = 2;
+            // 
+            // Marcar
+            // 
+            this.Marcar.HeaderText = "Marcar";
+            this.Marcar.MinimumWidth = 6;
+            this.Marcar.Name = "Marcar";
+            this.Marcar.Width = 125;
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.BackColor = System.Drawing.Color.Transparent;
+            this.Label12.ForeColor = System.Drawing.Color.Green;
+            this.Label12.Location = new System.Drawing.Point(273, 283);
+            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(427, 25);
+            this.Label12.TabIndex = 612;
+            this.Label12.Text = "(marca los modulos a los que se tendra acceso)";
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.BackColor = System.Drawing.Color.Transparent;
+            this.Label11.ForeColor = System.Drawing.Color.Black;
+            this.Label11.Location = new System.Drawing.Point(161, 283);
+            this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(99, 25);
+            this.Label11.TabIndex = 226;
+            this.Label11.Text = "Permisos:";
+            // 
+            // cbxRol
+            // 
+            this.cbxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRol.FormattingEnabled = true;
+            this.cbxRol.Items.AddRange(new object[] {
+            "Mozo",
+            "Cajero",
+            "Administrador"});
+            this.cbxRol.Location = new System.Drawing.Point(227, 223);
+            this.cbxRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxRol.Name = "cbxRol";
+            this.cbxRol.Size = new System.Drawing.Size(277, 33);
+            this.cbxRol.TabIndex = 2;
+            this.cbxRol.SelectedIndexChanged += new System.EventHandler(this.cbxRol_SelectedIndexChanged);
+            // 
+            // txtcorreo
+            // 
+            this.txtcorreo.Location = new System.Drawing.Point(227, 171);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(367, 30);
+            this.txtcorreo.TabIndex = 1;
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.Location = new System.Drawing.Point(227, 123);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcontraseña.MaxLength = 6;
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.Size = new System.Drawing.Size(177, 30);
+            this.txtcontraseña.TabIndex = 1;
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Location = new System.Drawing.Point(227, 70);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(249, 30);
+            this.txtusuario.TabIndex = 1;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(227, 17);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(367, 30);
+            this.txtnombre.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(161, 226);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Rol:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 171);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Correo electronico:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(120, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Usuario:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(413, 118);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 36);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Se permite hasta \r\n6 numeros";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(83, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Contraseña:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(119, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre:";
+            // 
+            // datalistadoUsuarios
+            // 
+            this.datalistadoUsuarios.AllowUserToAddRows = false;
+            this.datalistadoUsuarios.AllowUserToDeleteRows = false;
+            this.datalistadoUsuarios.AllowUserToResizeRows = false;
+            this.datalistadoUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar,
+            this.Editar});
+            this.datalistadoUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoUsuarios.EnableHeadersVisualStyles = false;
+            this.datalistadoUsuarios.Location = new System.Drawing.Point(0, 128);
+            this.datalistadoUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datalistadoUsuarios.Name = "datalistadoUsuarios";
+            this.datalistadoUsuarios.ReadOnly = true;
+            this.datalistadoUsuarios.RowHeadersVisible = false;
+            this.datalistadoUsuarios.RowHeadersWidth = 51;
+            this.datalistadoUsuarios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadoUsuarios.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadoUsuarios.RowTemplate.Height = 40;
+            this.datalistadoUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoUsuarios.Size = new System.Drawing.Size(1679, 794);
+            this.datalistadoUsuarios.TabIndex = 1;
+            this.datalistadoUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoUsuarios_CellClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 125;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "";
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.MinimumWidth = 6;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 125;
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 125;
+            // 
+            // btnVolverIcono
+            // 
+            this.btnVolverIcono.BackgroundImage = global::SistemaRestaurant.Properties.Resources.azul;
+            this.btnVolverIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolverIcono.FlatAppearance.BorderSize = 0;
+            this.btnVolverIcono.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverIcono.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolverIcono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverIcono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverIcono.ForeColor = System.Drawing.Color.White;
+            this.btnVolverIcono.Location = new System.Drawing.Point(249, 480);
+            this.btnVolverIcono.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolverIcono.Name = "btnVolverIcono";
+            this.btnVolverIcono.Size = new System.Drawing.Size(149, 57);
+            this.btnVolverIcono.TabIndex = 6;
+            this.btnVolverIcono.Text = "Volver";
+            this.btnVolverIcono.UseVisualStyleBackColor = true;
+            this.btnVolverIcono.Click += new System.EventHandler(this.btnVolverIcono_Click);
+            // 
+            // AgregarIcono
+            // 
+            this.AgregarIcono.Image = global::SistemaRestaurant.Properties.Resources.foto__1_;
+            this.AgregarIcono.Location = new System.Drawing.Point(33, 480);
+            this.AgregarIcono.Margin = new System.Windows.Forms.Padding(4);
+            this.AgregarIcono.Name = "AgregarIcono";
+            this.AgregarIcono.Size = new System.Drawing.Size(204, 191);
+            this.AgregarIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AgregarIcono.TabIndex = 5;
+            this.AgregarIcono.TabStop = false;
+            this.AgregarIcono.Click += new System.EventHandler(this.AgregarIcono_Click);
+            // 
+            // p8
+            // 
+            this.p8.Image = global::SistemaRestaurant.Properties.Resources.homero;
+            this.p8.Location = new System.Drawing.Point(4, 4);
+            this.p8.Margin = new System.Windows.Forms.Padding(4);
+            this.p8.Name = "p8";
+            this.p8.Size = new System.Drawing.Size(204, 191);
+            this.p8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p8.TabIndex = 0;
+            this.p8.TabStop = false;
+            this.p8.Click += new System.EventHandler(this.p8_Click);
+            // 
+            // p7
+            // 
+            this.p7.Image = global::SistemaRestaurant.Properties.Resources.cerveza;
+            this.p7.Location = new System.Drawing.Point(216, 4);
+            this.p7.Margin = new System.Windows.Forms.Padding(4);
+            this.p7.Name = "p7";
+            this.p7.Size = new System.Drawing.Size(204, 191);
+            this.p7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p7.TabIndex = 1;
+            this.p7.TabStop = false;
+            this.p7.Click += new System.EventHandler(this.p7_Click);
+            // 
+            // p6
+            // 
+            this.p6.Image = global::SistemaRestaurant.Properties.Resources.monster;
+            this.p6.Location = new System.Drawing.Point(428, 4);
+            this.p6.Margin = new System.Windows.Forms.Padding(4);
+            this.p6.Name = "p6";
+            this.p6.Size = new System.Drawing.Size(204, 191);
+            this.p6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p6.TabIndex = 2;
+            this.p6.TabStop = false;
+            this.p6.Click += new System.EventHandler(this.p6_Click);
+            // 
+            // p5
+            // 
+            this.p5.Image = global::SistemaRestaurant.Properties.Resources.animal;
+            this.p5.Location = new System.Drawing.Point(640, 4);
+            this.p5.Margin = new System.Windows.Forms.Padding(4);
+            this.p5.Name = "p5";
+            this.p5.Size = new System.Drawing.Size(204, 191);
+            this.p5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p5.TabIndex = 3;
+            this.p5.TabStop = false;
+            this.p5.Click += new System.EventHandler(this.p5_Click);
+            // 
+            // p4
+            // 
+            this.p4.Image = global::SistemaRestaurant.Properties.Resources.extraterrestre;
+            this.p4.Location = new System.Drawing.Point(4, 4);
+            this.p4.Margin = new System.Windows.Forms.Padding(4);
+            this.p4.Name = "p4";
+            this.p4.Size = new System.Drawing.Size(204, 191);
+            this.p4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p4.TabIndex = 0;
+            this.p4.TabStop = false;
+            this.p4.Click += new System.EventHandler(this.p4_Click);
+            // 
+            // p3
+            // 
+            this.p3.Image = global::SistemaRestaurant.Properties.Resources.sonreir;
+            this.p3.Location = new System.Drawing.Point(216, 4);
+            this.p3.Margin = new System.Windows.Forms.Padding(4);
+            this.p3.Name = "p3";
+            this.p3.Size = new System.Drawing.Size(204, 191);
+            this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p3.TabIndex = 1;
+            this.p3.TabStop = false;
+            this.p3.Click += new System.EventHandler(this.p3_Click);
+            // 
+            // p2
+            // 
+            this.p2.Image = global::SistemaRestaurant.Properties.Resources.fuego__1_;
+            this.p2.Location = new System.Drawing.Point(428, 4);
+            this.p2.Margin = new System.Windows.Forms.Padding(4);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(204, 191);
+            this.p2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p2.TabIndex = 2;
+            this.p2.TabStop = false;
+            this.p2.Click += new System.EventHandler(this.p2_Click);
+            // 
+            // p1
+            // 
+            this.p1.Image = global::SistemaRestaurant.Properties.Resources.nuclear;
+            this.p1.Location = new System.Drawing.Point(640, 4);
+            this.p1.Margin = new System.Windows.Forms.Padding(4);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(204, 191);
+            this.p1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.p1.TabIndex = 3;
+            this.p1.TabStop = false;
+            this.p1.Click += new System.EventHandler(this.p1_Click);
+            // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(603, 17);
+            this.Icono.Margin = new System.Windows.Forms.Padding(4);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(225, 185);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 615;
+            this.Icono.TabStop = false;
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackgroundImage = global::SistemaRestaurant.Properties.Resources.azul;
+            this.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnguardar.FlatAppearance.BorderSize = 0;
+            this.btnguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(4, 4);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(149, 57);
+            this.btnguardar.TabIndex = 6;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackgroundImage = global::SistemaRestaurant.Properties.Resources.azul1;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(161, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(149, 57);
+            this.btnActualizar.TabIndex = 7;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnvolver
+            // 
+            this.btnvolver.BackgroundImage = global::SistemaRestaurant.Properties.Resources.naranja;
+            this.btnvolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnvolver.FlatAppearance.BorderSize = 0;
+            this.btnvolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnvolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolver.ForeColor = System.Drawing.Color.White;
+            this.btnvolver.Location = new System.Drawing.Point(318, 4);
+            this.btnvolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(149, 57);
+            this.btnvolver.TabIndex = 8;
+            this.btnvolver.Text = "Volver";
+            this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.BackgroundImage = global::SistemaRestaurant.Properties.Resources.verde;
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnagregar.FlatAppearance.BorderSize = 0;
+            this.btnagregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.ForeColor = System.Drawing.Color.White;
+            this.btnagregar.Location = new System.Drawing.Point(472, 15);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(149, 57);
+            this.btnagregar.TabIndex = 5;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaRestaurant.Properties.Resources.buscar;
+            this.pictureBox1.Location = new System.Drawing.Point(369, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // UsuariosOk
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1679, 922);
+            this.Controls.Add(this.panelregistro);
+            this.Controls.Add(this.datalistadoUsuarios);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "UsuariosOk";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UsuariosOk_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panelregistro.ResumeLayout(false);
+            this.panelregistro.PerformLayout();
+            this.panelIcono.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoPermisos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIcono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelregistro;
+        private System.Windows.Forms.DataGridView datalistadoUsuarios;
+        private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnagregar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label Label12;
+        internal System.Windows.Forms.Label Label11;
+        private System.Windows.Forms.ComboBox cbxRol;
+        private System.Windows.Forms.TextBox txtcorreo;
+        private System.Windows.Forms.TextBox txtcontraseña;
+        private System.Windows.Forms.TextBox txtusuario;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnvolver;
+        private System.Windows.Forms.Panel panelIcono;
+        private System.Windows.Forms.Label lblanuncioIcono;
+        private System.Windows.Forms.PictureBox Icono;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.PictureBox p8;
+        private System.Windows.Forms.PictureBox AgregarIcono;
+        private System.Windows.Forms.PictureBox p7;
+        private System.Windows.Forms.PictureBox p6;
+        private System.Windows.Forms.PictureBox p5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.PictureBox p4;
+        private System.Windows.Forms.PictureBox p3;
+        private System.Windows.Forms.PictureBox p2;
+        private System.Windows.Forms.PictureBox p1;
+        private System.Windows.Forms.DataGridView datalistadoPermisos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Marcar;
+        private System.Windows.Forms.OpenFileDialog dlg;
+        private System.Windows.Forms.Button btnVolverIcono;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Label label7;
+    }
+}
