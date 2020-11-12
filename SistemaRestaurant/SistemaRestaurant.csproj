@@ -45,8 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Connection.cs" />
+    <Compile Include="Datos\Dmodule.cs" />
+    <Compile Include="Datos\Dpermission.cs" />
+    <Compile Include="Datos\Dusers.cs" />
     <Compile Include="Logica\Decryption.cs" />
     <Compile Include="Logica\Encryption.cs" />
+    <Compile Include="Logica\Lmodules.cs" />
+    <Compile Include="Logica\Lpermission.cs" />
+    <Compile Include="Logica\Lusers.cs" />
     <Compile Include="Presentacion\ConexionManual\CONEXION_MANUAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Users\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Users\FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

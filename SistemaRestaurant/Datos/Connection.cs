@@ -21,7 +21,7 @@ namespace SistemaRestaurant.Datos
             }
         }
 
-        public static void cerrar()
+        public static void close()
         {
             if(connect.State == ConnectionState.Open)
             {
