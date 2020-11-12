@@ -6,240 +6,177 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using RestCsharp.Datos;
-using RestCsharp.Logica;
 using System.IO;
 using System.Net.NetworkInformation;
+using SistemaRestaurant.Datos;
+using SistemaRestaurant.Logica;
 
-namespace RestCsharp.Presentacion.Usuarios
+namespace SistemaRestaurant.Presentacion.Users
 {
     public partial class UsuariosOk : Form
     {
+        bool proceeds;
+        int iduser;
+        string state;
         public UsuariosOk()
         {
             InitializeComponent();
         }
-        bool procede;
-        int idusuario;
-        string estado;
-        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            buscar();
+            search();
         }
-        private void buscar()
+
+        private void search()
         {
             DataTable dt = new DataTable();
-            Dusuarios funcion = new Dusuarios();
-            funcion.buscar_usuarios(ref dt, txtbuscar.Text);
-            datalistadoUsuarios.DataSource = dt;
-            PintarGrid();
+            Dusers funcion = new Dusers();
+            funcion.search_users(ref dt, txtSearch.Text);
+            datalistadoUsers.DataSource = dt;
         }
        
+        private void drawModules()
+        {
+            Dmodule function = new Dmodule();
+            DataTable dt = new DataTable();
+            function.show_Modules(ref dt);
+            datalistadoPermission.DataSource = dt;
 
+        }
+
+        private void clean()
+        {
+            txtName.Clear();
+            txtPassword.Clear();
+            txtUser.Clear();
+            txtEmail.Clear();
+        }
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            limpiar();
-            habilitarPaneles();
-            dibujarModulos();
+            clean();
+            enablePanels();
+            drawModules();
         }
-        private void habilitarPaneles()
+        private void enablePanels()
         {
             panelregistro.Visible = true;
             lblanuncioIcono.Visible = true;
             panelIcono.Visible = false;
             panelregistro.Dock = DockStyle.Fill;
-            btnguardar.Visible = true;
+            btnSave.Visible = true;
             btnActualizar.Visible = false;
-        }
-        private void limpiar()
-        {
-            txtnombre.Clear();
-            txtcontraseña.Clear();
-            txtusuario.Clear();
-            txtcorreo.Clear();
-        }
-        private void dibujarModulos()
-        {
-            Dmodulos funcion = new Dmodulos();
-            DataTable dt = new DataTable();
-            funcion.mostrar_Modulos(ref dt);
-            datalistadoPermisos.DataSource = dt;
         }
 
         private void UsuariosOk_Load(object sender, EventArgs e)
         {
-            mostrarUsuarios();
+            showUsers();
         }
-        private void mostrarUsuarios()
+        private void showUsers()
         {
             DataTable dt = new DataTable();
-            Dusuarios funcion = new Dusuarios();
-            funcion.mostrar_Usuarios(ref dt);
-            datalistadoUsuarios.DataSource = dt;
+            Dusers funcion = new Dusers();
+            funcion.show_Users(ref dt);
+            datalistadoUsers.DataSource = dt;
 
-            PintarGrid();
+            //PintarGrid();
         }
-        private void PintarGrid()
-        {
-            Bases propiedad = new Bases();
-            propiedad.DiseñoDatagridview(ref datalistadoUsuarios);
-            propiedad.DiseñoDatagridviewEliminar(ref datalistadoUsuarios);
-            datalistadoUsuarios.Columns[2].Visible = false;
-            datalistadoUsuarios.Columns[6].Visible = false;
-            datalistadoUsuarios.Columns[7].Visible = false;
 
-        }
         private void cbxRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int indice = cbxRol.SelectedIndex;
-            foreach (DataGridViewRow row in datalistadoPermisos .Rows )
+            int index = cbxRol.SelectedIndex;
+            foreach (DataGridViewRow row in datalistadoPermission.Rows)
             {
-                bool marcar = Convert.ToBoolean ( row.Cells["Marcar"].Value);
-                string Modulo = row.Cells["Modulo"].Value.ToString();
-                if (indice ==0)
+                bool mark = Convert.ToBoolean(row.Cells["Marcar"].Value);
+                string Module = row.Cells["Modulo"].Value.ToString();
+                if (index== 0)
                 {
-                    if (Modulo == "Ventas") { row.Cells[0].Value = true; }
-                    if (Modulo == "Compras") { row.Cells[0].Value = false; }
-                    if (Modulo == "Caja") { row.Cells[0].Value = false; }
+                    if (Module == "Ventas") { row.Cells[0].Value = true; }
+                    if (Module == "Compras") { row.Cells[0].Value = false; }
+                    if (Module == "Caja") { row.Cells[0].Value = false; }
                 }
-                if (indice == 1)
+                if (index == 1)
                 {
-                    if (Modulo == "Ventas") { row.Cells[0].Value = true; }
-                    if (Modulo == "Compras") { row.Cells[0].Value = false; }
-                    if (Modulo == "Caja") { row.Cells[0].Value = true; }
+                    if (Module == "Ventas") { row.Cells[0].Value = true; }
+                    if (Module == "Compras") { row.Cells[0].Value = false; }
+                    if (Module == "Caja") { row.Cells[0].Value = true; }
                 }
-                if (indice == 2)
+                if (index == 2)
                 {
                     row.Cells[0].Value = true;
                 }
-            }   
+            }
         }
 
-        private void btnguardar_Click(object sender, EventArgs e)
+        private void insertUsers()
         {
-            Validaciones();
-            if (procede==true)
-            {
-               insertarUsuarios();
-            }
-           
-        }
-        private void insertarUsuarios()
-        {
-            Lusuarios parametros = new Lusuarios();
-            Dusuarios funcion = new Dusuarios();
-            parametros.Nombre = txtnombre.Text;
-            parametros.Login = txtusuario.Text;
-            parametros.Password =Bases.Encriptar(txtcontraseña.Text);
+            Lusers parameters = new Lusers();
+            Dusers function = new Dusers();
+            parameters.Name = txtName.Text;
+            parameters.Login = txtUser.Text;
+            //parameters.Password = Bases.Encriptar(txtPassword.Text);
             MemoryStream ms = new MemoryStream();
             Icono.Image.Save(ms, Icono.Image.RawFormat);
-            parametros.Icono = ms.GetBuffer();
-            parametros.Correo = txtcorreo.Text;
-            parametros.Rol = cbxRol.Text;
-            if(funcion.InsertarUsuarios(parametros) ==true)
+            parameters.Icon = ms.GetBuffer();
+            parameters.Email = txtEmail.Text;
+            parameters.Role = cbxRol.Text;
+            if (function.InsertUsers(parameters) == true)
             {
-                ObtenerIdUsuario();
-                insertarPermisos();
+                GetUserID();
+                insertPermissions();
 
             }
         }
-        private void Validaciones()
+        private void GetUserID()
         {
-            if (!string.IsNullOrEmpty (txtnombre.Text ))
-            {
-                if (!string.IsNullOrEmpty (txtusuario.Text ))
-                {
-                    if ( !string.IsNullOrEmpty (txtcontraseña.Text ))
-                    {
-                        if (!string.IsNullOrEmpty (cbxRol.Text ) )
-                        {
-                            if (lblanuncioIcono.Visible==false )
-                            {
-                             procede = true;
-                            if (!string.IsNullOrEmpty (txtcorreo.Text )) { txtcorreo.Text = "-"; }
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Seleccione un Icono");
-                                procede = false;
-                            }
-                          
-                        }
-                        else
-                        {
-                            MessageBox.Show("Seleccione un rol");
-                            procede = false;
-
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese la contraseña");
-                        procede = false;
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese el Usuario");
-                    procede = false;
-
-                }
-            }
-            else
-            {
-                procede = false;
-                MessageBox.Show("Ingrese el Nombre");
-            }
+            Dusers function = new Dusers();
+            function.GetUserID(ref iduser,txtUser.Text);
         }
-        private void ObtenerIdUsuario()
+        private void insertPermissions()
         {
-            Dusuarios funcion = new Dusuarios();
-            funcion.ObtenerIdUsuario(ref idusuario, txtusuario.Text);
-        }
-        private void insertarPermisos()
-        {
-            foreach (DataGridViewRow row in datalistadoPermisos .Rows )
+            foreach (DataGridViewRow row in datalistadoPermission.Rows)
             {
-                int idModulo =Convert.ToInt32 ( row.Cells["IdModulo"].Value);
-                bool marcado =Convert.ToBoolean ( row.Cells["Marcar"].Value);
-                if (marcado ==true )
+                int idModule = Convert.ToInt32(row.Cells["IdModulo"].Value);
+                bool marked = Convert.ToBoolean(row.Cells["Marcar"].Value);
+                if (marked == true)
                 {
-                   Lpermisos parametros = new Lpermisos();
-                   Dpermisos funcion = new Dpermisos();
-                    parametros.IdModulo = idModulo;
-                    parametros.IdUsuario = idusuario;
-                    if (funcion.Insertar_Permisos (parametros )==true)
+                    Lpermission parametros = new Lpermission();
+                    Dpermission funcion = new Dpermission();
+                    parametros.IdModule = idModule;
+                    parametros.IdUser = iduser;
+                    if (funcion.Insert_Permissions(parametros) == true)
                     {
-                        mostrarUsuarios();
+                        showUsers();
                         panelregistro.Visible = false;
                     }
                 }
             }
 
-            
-        }
 
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
         private void AgregarIcono_Click(object sender, EventArgs e)
         {
             dlg.InitialDirectory = "";
             dlg.Filter = "Imagenes|*.jpg;*.png";
             dlg.FilterIndex = 2;
             dlg.Title = "Cargador de imagenes";
-            if (dlg.ShowDialog ()== DialogResult.OK )
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
                 Icono.BackgroundImage = null;
                 Icono.Image = new Bitmap(dlg.FileName);
-                ocultarPanelIconos();
+                hidePanelIcons();
             }
         }
-        private void ocultarPanelIconos()
+        private void hidePanelIcons()
         {
             panelIcono.Visible = false;
             lblanuncioIcono.Visible = false;
             Icono.Visible = true;
         }
+
         private void lblanuncioIcono_Click(object sender, EventArgs e)
         {
             panelIcono.Visible = true;
@@ -250,197 +187,70 @@ namespace RestCsharp.Presentacion.Usuarios
         private void p8_Click(object sender, EventArgs e)
         {
             Icono.Image = p8.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p7_Click(object sender, EventArgs e)
         {
             Icono.Image = p7.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p6_Click(object sender, EventArgs e)
         {
             Icono.Image = p6.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p5_Click(object sender, EventArgs e)
         {
             Icono.Image = p5.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p4_Click(object sender, EventArgs e)
         {
             Icono.Image = p4.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p3_Click(object sender, EventArgs e)
         {
             Icono.Image = p3.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p2_Click(object sender, EventArgs e)
         {
             Icono.Image = p2.Image;
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void p1_Click(object sender, EventArgs e)
         {
-            Icono.Image = p1.Image;
-            ocultarPanelIconos();
+            Icono.Image = p6.Image;
+            hidePanelIcons();
+
         }
 
         private void btnVolverIcono_Click(object sender, EventArgs e)
         {
-            ocultarPanelIconos();
+            hidePanelIcons();
         }
 
         private void datalistadoUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex== datalistadoUsuarios.Columns ["Editar"].Index  )
-            {
-                obtenerEstado();
-                if (estado =="ELIMINADO")
-                {
-                    DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                   if (resultado == DialogResult.OK )
-                    {
-                        restaurar();
-                    }
-                }
-                else
-                {
-                    obtenerDatos();
-                }
-               
-            }
-            if (e.ColumnIndex == datalistadoUsuarios.Columns["Eliminar"].Index )
-            {
-                DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?","Eliminando registros",MessageBoxButtons.OKCancel,MessageBoxIcon.Question );
-                if (resultado ==DialogResult.OK )
-                {
-
-                    eliminarUsuarios();
-                }
-            }
-        }
-        private void restaurar()
-        {
-            capturarIdUsuario();
-            Lusuarios parametros = new Lusuarios();
-            Dusuarios funcion = new Dusuarios();
-            parametros.IdUsuario = idusuario;
-            if (funcion.restaurar_usuario (parametros)==true )
-            {
-                mostrarUsuarios();
-            }
-        }
-        private void eliminarUsuarios()
-        {
-            capturarIdUsuario();
-            Lusuarios parametros = new Lusuarios();
-            Dusuarios funcion = new Dusuarios();
-            parametros.IdUsuario = idusuario;
-            if (funcion.eliminar_Usuarios (parametros)==true)
-            {
-                mostrarUsuarios();
-            }
-        }
-        private void capturarIdUsuario()
-        {
-            idusuario =Convert.ToInt32 ( datalistadoUsuarios.SelectedCells[2].Value);
-        }
-        private void obtenerEstado()
-        {
-            estado = datalistadoUsuarios.SelectedCells[9].Value.ToString();
-        }
-        private void obtenerDatos()
-        {
-            capturarIdUsuario();
-            txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
-            txtusuario .Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
-            txtcontraseña .Text =Bases.Desencriptar(datalistadoUsuarios.SelectedCells[5].Value.ToString());
-            Icono.BackgroundImage = null;
-            byte[] b = (byte[])(datalistadoUsuarios.SelectedCells[6].Value);
-            MemoryStream ms = new MemoryStream(b);
-            Icono.Image = Image.FromStream(ms);
-            txtcorreo .Text = datalistadoUsuarios.SelectedCells[7].Value.ToString();
-            cbxRol.Text = datalistadoUsuarios.SelectedCells[8].Value.ToString();
            
-            panelregistro.Visible = true;
-            panelregistro.Dock = DockStyle.Fill;
-            lblanuncioIcono.Visible = false;
-            btnActualizar.Visible = true;
-            btnguardar.Visible = false;
-            dibujarModulos();
-            mostrarPermisos();
         }
-        private void mostrarPermisos()
-        {
-            DataTable dt = new DataTable();
-            Dpermisos funcion = new Dpermisos();
-            Lpermisos parametros = new Lpermisos();
-            parametros.IdUsuario = idusuario;
-            funcion.mostrar_Permisos(ref dt, parametros);
-
-            foreach (DataRow rowPermisos in dt.Rows)
-            {
-                int idmoduloPermisos =Convert.ToInt32 (rowPermisos["IdModulo"]);
-                foreach (DataGridViewRow rowModulos in datalistadoPermisos.Rows )
-                {
-                    int idmodulo = Convert.ToInt32 ( rowModulos.Cells["IdModulo"].Value);
-                    if (idmoduloPermisos==idmodulo  )
-                    {
-                        rowModulos.Cells[0].Value = true;
-                    }
-                }
-            }
-
-        }
+     
+       
+      
         private void btnvolver_Click(object sender, EventArgs e)
         {
-            panelregistro.Visible = false;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Validaciones();
-            if (procede == true)
-            {
-                editarUsuarios();
-            }
-        }
-        private void editarUsuarios()
-        {
-            Lusuarios parametros = new Lusuarios();
-            Dusuarios funcion = new Dusuarios();
-            parametros.IdUsuario = idusuario;
-            parametros.Nombre = txtnombre.Text;
-            parametros.Login = txtusuario.Text;
-            parametros.Password =Bases.Encriptar (txtcontraseña.Text);
-            MemoryStream ms = new MemoryStream();
-            Icono.Image.Save(ms, Icono.Image.RawFormat);
-            parametros.Icono = ms.GetBuffer();
-            parametros.Correo = txtcorreo.Text;
-            parametros.Rol = cbxRol.Text;  
-            if (funcion.editar_Usuarios (parametros) == true)
-            {
-                eliminarPermisos();
-                insertarPermisos();
-            }
-        }
-        private void eliminarPermisos()
-        {
-            Lpermisos parametros = new Lpermisos();
-            Dpermisos funcion = new Dpermisos();
-            parametros.IdUsuario = idusuario;
-            funcion.Eliminar_Permisos(parametros);
-
            
         }
 
@@ -459,5 +269,7 @@ namespace RestCsharp.Presentacion.Usuarios
                 e.Handled = true;
             }
         }
+
+       
     }
 }
