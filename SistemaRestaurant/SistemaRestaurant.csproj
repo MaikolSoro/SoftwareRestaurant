@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Connection.cs" />
+    <Compile Include="Logica\Decryption.cs" />
+    <Compile Include="Logica\Encryption.cs" />
+    <Compile Include="Presentacion\ConexionManual\CONEXION_MANUAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ConexionManual\CONEXION_MANUAL.Designer.cs">
+      <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\ConexionManual\CONEXION_MANUAL.resx">
+      <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,9 +86,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-    <Folder Include="Logica\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
