@@ -148,5 +148,70 @@ namespace SistemaRestaurant.Datos
 				Connection.close();
 			}
 		}
+
+		public bool restore_user(Lusers parameters)
+		{
+			try
+			{
+				Connection.open();
+				SqlCommand cmd = new SqlCommand("restore_user", Connection.connect);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@iduser", parameters.IdUser);
+
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				Connection.close();
+			}
+
+		}
+		public void drawUsers(ref DataTable dt)
+		{
+			try
+			{
+				Connection.open();
+				SqlDataAdapter da = new SqlDataAdapter("Select * from Usuarios where Estado='ACTIVO'", Connection.connect);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				Connection.close();
+			}
+		}
+		public void validateUser(Lusers parameters, ref int id)
+		{
+			try
+			{
+				Connection.open();
+				SqlCommand cmd = new SqlCommand("validateUser", Connection.connect);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@password", parameters.Password);
+				cmd.Parameters.AddWithValue("@login", parameters.Login);
+				id = Convert.ToInt32(cmd.ExecuteScalar());
+
+
+			}
+			catch (Exception ex)
+			{
+				id = 0;
+
+			}
+			finally
+			{
+				Connection.close();
+			}
+		}
+
 	}
 }
