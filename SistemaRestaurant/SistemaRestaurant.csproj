@@ -48,6 +48,7 @@
     <Compile Include="Datos\Dmodule.cs" />
     <Compile Include="Datos\Dpermission.cs" />
     <Compile Include="Datos\Dusers.cs" />
+    <Compile Include="Logica\Bases.cs" />
     <Compile Include="Logica\Decryption.cs" />
     <Compile Include="Logica\Encryption.cs" />
     <Compile Include="Logica\Lmodules.cs" />
