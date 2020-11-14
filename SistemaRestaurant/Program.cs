@@ -15,7 +15,15 @@ namespace SistemaRestaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion.FormUsers());
+            Presentacion.Login.LoginForm frm = new Presentacion.Login.LoginForm();
+            frm.FormClosed += frm_closed;
+            frm.ShowDialog();
+            Application.Run();
+        }
+        private static void frm_closed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
+            Application.Exit();
         }
     }
 }
