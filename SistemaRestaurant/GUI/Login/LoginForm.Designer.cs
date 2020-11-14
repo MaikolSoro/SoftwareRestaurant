@@ -1,4 +1,4 @@
-﻿namespace SistemaRestaurant.Presentacion.Login
+﻿namespace SistemaRestaurant.GUI.Login
 {
     partial class LoginForm
     {

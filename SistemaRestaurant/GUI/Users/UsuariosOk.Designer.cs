@@ -1,4 +1,4 @@
-﻿namespace SistemaRestaurant.Presentacion.Users
+﻿namespace SistemaRestaurant.GUI.Users
 {
     partial class UsuariosOk
     {

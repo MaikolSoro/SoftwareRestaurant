@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Security.Cryptography;
 
-namespace SistemaRestaurant.Logica
+namespace SistemaRestaurant.BOL
 {
     public class Bases
     {

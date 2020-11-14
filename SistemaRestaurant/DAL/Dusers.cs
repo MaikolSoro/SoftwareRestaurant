@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using SistemaRestaurant.Logica;
+using SistemaRestaurant.BOL;
 using System.Windows.Forms;
 
-namespace SistemaRestaurant.Datos
+namespace SistemaRestaurant.DAL
 {
     class Dusers
     {

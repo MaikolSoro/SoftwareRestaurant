@@ -4,12 +4,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Data;
-namespace SistemaRestaurant.Datos
+namespace SistemaRestaurant.DAL
 {
     class Connection
     {
 
-        public static string connection = Convert.ToString(Logica.Decryption.checkServer());
+        public static string connection = Convert.ToString(BOL.Decryption.checkServer());
         public static SqlConnection connect = new SqlConnection(connection);
 
         public static void open()

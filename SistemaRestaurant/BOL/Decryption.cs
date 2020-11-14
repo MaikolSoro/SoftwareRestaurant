@@ -6,7 +6,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Xml;
 
-namespace SistemaRestaurant.Logica
+namespace SistemaRestaurant.BOL
 {
     class Decryption
     {
