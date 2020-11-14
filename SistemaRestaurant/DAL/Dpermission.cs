@@ -1,4 +1,4 @@
-﻿using SistemaRestaurant.Logica;
+﻿using SistemaRestaurant.BOL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SistemaRestaurant.Datos
+namespace SistemaRestaurant.DAL
 {
    public class Dpermission
     {

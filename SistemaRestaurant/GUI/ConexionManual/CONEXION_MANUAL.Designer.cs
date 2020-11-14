@@ -1,4 +1,4 @@
-﻿namespace SistemaRestaurant.CONEXION
+﻿namespace SistemaRestaurant.GUI.ConexionManual
 {
     partial class CONEXION_MANUAL
     {

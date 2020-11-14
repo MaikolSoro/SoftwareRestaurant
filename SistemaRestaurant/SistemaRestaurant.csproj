@@ -44,52 +44,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Connection.cs" />
-    <Compile Include="Datos\Dmodule.cs" />
-    <Compile Include="Datos\Dpermission.cs" />
-    <Compile Include="Datos\Dusers.cs" />
-    <Compile Include="Logica\Bases.cs" />
-    <Compile Include="Logica\Decryption.cs" />
-    <Compile Include="Logica\Encryption.cs" />
-    <Compile Include="Logica\Lmodules.cs" />
-    <Compile Include="Logica\Lpermission.cs" />
-    <Compile Include="Logica\Lusers.cs" />
-    <Compile Include="Presentacion\ConexionManual\CONEXION_MANUAL.cs">
+    <Compile Include="DAL\Connection.cs" />
+    <Compile Include="DAL\Dmodule.cs" />
+    <Compile Include="DAL\Dpermission.cs" />
+    <Compile Include="DAL\Dusers.cs" />
+    <Compile Include="BOL\Bases.cs" />
+    <Compile Include="BOL\Decryption.cs" />
+    <Compile Include="BOL\Encryption.cs" />
+    <Compile Include="BOL\Lmodules.cs" />
+    <Compile Include="BOL\Lpermission.cs" />
+    <Compile Include="BOL\Lusers.cs" />
+    <Compile Include="GUI\ConexionManual\CONEXION_MANUAL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\ConexionManual\CONEXION_MANUAL.Designer.cs">
+    <Compile Include="GUI\ConexionManual\CONEXION_MANUAL.Designer.cs">
       <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FormUsers.cs">
+    <Compile Include="GUI\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FormUsers.Designer.cs">
+    <Compile Include="GUI\FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Login\LoginForm.cs">
+    <Compile Include="GUI\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Login\LoginForm.Designer.cs">
+    <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Users\UsuariosOk.cs">
+    <Compile Include="GUI\Users\UsuariosOk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Users\UsuariosOk.Designer.cs">
+    <Compile Include="GUI\Users\UsuariosOk.Designer.cs">
       <DependentUpon>UsuariosOk.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\ConexionManual\CONEXION_MANUAL.resx">
+    <EmbeddedResource Include="GUI\ConexionManual\CONEXION_MANUAL.resx">
       <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FormUsers.resx">
+    <EmbeddedResource Include="GUI\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Login\LoginForm.resx">
+    <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Users\UsuariosOk.resx">
+    <EmbeddedResource Include="GUI\Users\UsuariosOk.resx">
       <DependentUpon>UsuariosOk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

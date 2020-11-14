@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Net.NetworkInformation;
-using SistemaRestaurant.Datos;
-using SistemaRestaurant.Logica;
+using SistemaRestaurant.DAL;
+using SistemaRestaurant.BOL;
 
-namespace SistemaRestaurant.Presentacion.Users
+namespace SistemaRestaurant.GUI.Users
 {
     public partial class UsuariosOk : Form
     {

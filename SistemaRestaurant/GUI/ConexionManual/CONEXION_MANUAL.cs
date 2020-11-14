@@ -8,11 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Data.SqlClient;
-namespace SistemaRestaurant.CONEXION
+namespace SistemaRestaurant.GUI.ConexionManual
 {
     public partial class CONEXION_MANUAL : Form
     {
-        private Logica.AES aes = new Logica.AES();
+        private BOL.AES aes = new BOL.AES();
         int idtable;
         public CONEXION_MANUAL()
         {
@@ -39,7 +39,7 @@ namespace SistemaRestaurant.CONEXION
                 doc.Load("ConnectionString.xml");
                 XmlElement root = doc.DocumentElement;
                 dbcnString = root.Attributes[0].Value;
-                txtCnString.Text = (aes.Decrypt(dbcnString, Logica.Decryption.appPwdUnique, int.Parse("256")));
+                txtCnString.Text = (aes.Decrypt(dbcnString, BOL.Decryption.appPwdUnique, int.Parse("256")));
             }
             catch (System.Security.Cryptography.CryptographicException ex)
             {
@@ -65,7 +65,7 @@ namespace SistemaRestaurant.CONEXION
                 con.Open();
                 idtable =Convert.ToInt32(com.ExecuteScalar());
                 con.Close();
-                 SavetoXML(aes.Encrypt(txtCnString.Text, Logica.Decryption.appPwdUnique, int.Parse("256")));
+                 SavetoXML(aes.Encrypt(txtCnString.Text, BOL.Decryption.appPwdUnique, int.Parse("256")));
                 MessageBox.Show("Connection successful", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
 
