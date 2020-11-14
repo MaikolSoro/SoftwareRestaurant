@@ -11,7 +11,7 @@ namespace SistemaRestaurant.Datos
 {
    public class Dmodule
     {
-        public bool Insertar_Modulos(Lmodules parameters)
+        public bool Insert_Modules(Lmodules parameters)
         {
             try
             {
