@@ -45,10 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BOL\Lsalon.cs" />
+    <Compile Include="BOL\Ltables.cs" />
     <Compile Include="DAL\Connection.cs" />
     <Compile Include="DAL\Dmodule.cs" />
     <Compile Include="DAL\Dpermission.cs" />
     <Compile Include="DAL\Dsalon.cs" />
+    <Compile Include="DAL\Dtables.cs" />
     <Compile Include="DAL\Dusers.cs" />
     <Compile Include="BOL\Bases.cs" />
     <Compile Include="BOL\Decryption.cs" />
@@ -74,6 +76,12 @@
     <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Tables_salons\Configure_tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Tables_salons\Configure_tables.Designer.cs">
+      <DependentUpon>Configure_tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Tables_salons\Salons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Tables_salons\Configure_tables.resx">
+      <DependentUpon>Configure_tables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Tables_salons\Salons.resx">
       <DependentUpon>Salons.cs</DependentUpon>
