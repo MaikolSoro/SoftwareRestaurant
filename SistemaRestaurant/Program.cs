@@ -15,7 +15,7 @@ namespace SistemaRestaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Presentacion.Login.LoginForm frm = new Presentacion.Login.LoginForm();
+            GUI.Login.LoginForm frm = new GUI.Login.LoginForm();
             frm.FormClosed += frm_closed;
             frm.ShowDialog();
             Application.Run();
