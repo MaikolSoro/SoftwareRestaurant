@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SistemaRestaurant.DAL
 {
-   public class Dsalon
+    public class Dsalon
     {
         public bool insert_Salon(Lsalon parameters)
         {
@@ -22,7 +22,7 @@ namespace SistemaRestaurant.DAL
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return false;
@@ -31,6 +31,24 @@ namespace SistemaRestaurant.DAL
             {
                 Connection.close();
 
+            }
+        }
+
+        public void drawSalons(ref DataTable dt)
+        {
+            try
+            {
+                Connection.open();
+                SqlDataAdapter da = new SqlDataAdapter("show_Salons", Connection.connect);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                Connection.close();
             }
         }
     }
