@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BOL\Lsalon.cs" />
     <Compile Include="DAL\Connection.cs" />
     <Compile Include="DAL\Dmodule.cs" />
     <Compile Include="DAL\Dpermission.cs" />
+    <Compile Include="DAL\Dsalon.cs" />
     <Compile Include="DAL\Dusers.cs" />
     <Compile Include="BOL\Bases.cs" />
     <Compile Include="BOL\Decryption.cs" />
