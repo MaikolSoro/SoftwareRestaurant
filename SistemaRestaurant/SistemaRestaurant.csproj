@@ -82,6 +82,12 @@
     <Compile Include="GUI\Products\Productos_rest.Designer.cs">
       <DependentUpon>Productos_rest.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Tables_salons\Add_table_ok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Tables_salons\Add_table_ok.Designer.cs">
+      <DependentUpon>Add_table_ok.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Tables_salons\Configure_tables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Products\Productos_rest.resx">
       <DependentUpon>Productos_rest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Tables_salons\Add_table_ok.resx">
+      <DependentUpon>Add_table_ok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Tables_salons\Configure_tables.resx">
       <DependentUpon>Configure_tables.cs</DependentUpon>
