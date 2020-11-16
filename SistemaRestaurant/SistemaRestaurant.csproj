@@ -76,6 +76,12 @@
     <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Products\Productos_rest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Products\Productos_rest.Designer.cs">
+      <DependentUpon>Productos_rest.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Tables_salons\Configure_tables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Products\Productos_rest.resx">
+      <DependentUpon>Productos_rest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Tables_salons\Configure_tables.resx">
       <DependentUpon>Configure_tables.cs</DependentUpon>
@@ -190,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa_vacia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuCajas_claro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
