@@ -42,6 +42,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIDC">
+      <HintPath>.\UIDC.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BOL\Lsalon.cs" />
@@ -75,6 +78,12 @@
     </Compile>
     <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Point_of_Sale\PointSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Point_of_Sale\PointSale.Designer.cs">
+      <DependentUpon>PointSale.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Products\Group_of_products.cs">
       <SubType>Form</SubType>
@@ -128,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Point_of_Sale\PointSale.resx">
+      <DependentUpon>PointSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Products\Group_of_products.resx">
       <DependentUpon>Group_of_products.cs</DependentUpon>
@@ -235,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha_derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha_izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
