@@ -45,13 +45,13 @@ namespace SistemaRestaurant.DAL
 				Connection.open();
 				SqlCommand cmd = new SqlCommand("edit_Users", Connection.connect);
 				cmd.CommandType = CommandType.StoredProcedure;
-				cmd.Parameters.AddWithValue("@IdUsuario", parameters.IdUser);
-				cmd.Parameters.AddWithValue("@Nombre", parameters.Name);
+				cmd.Parameters.AddWithValue("@IdUser", parameters.IdUser);
+				cmd.Parameters.AddWithValue("@Name", parameters.Name);
 				cmd.Parameters.AddWithValue("@Login", parameters.Login);
 				cmd.Parameters.AddWithValue("@Password", parameters.Password);
-				cmd.Parameters.AddWithValue("@Icono", parameters.Icon);
-				cmd.Parameters.AddWithValue("@Correo", parameters.Email);
-				cmd.Parameters.AddWithValue("@Rol", parameters.Role);
+				cmd.Parameters.AddWithValue("@Icon", parameters.Icon);
+				cmd.Parameters.AddWithValue("@Email", parameters.Email);
+				cmd.Parameters.AddWithValue("@Role", parameters.Role);
 
 				cmd.ExecuteNonQuery();
 				return true;
@@ -74,7 +74,7 @@ namespace SistemaRestaurant.DAL
 				Connection.open();
 				SqlCommand cmd = new SqlCommand("delete_Users", Connection.connect);
 				cmd.CommandType = CommandType.StoredProcedure;
-				cmd.Parameters.AddWithValue("@IdUsuario", parameters.IdUser);
+				cmd.Parameters.AddWithValue("@IdUser", parameters.IdUser);
 
 				cmd.ExecuteNonQuery();
 				return true;
