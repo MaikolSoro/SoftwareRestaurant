@@ -67,6 +67,12 @@
     <Compile Include="GUI\ConexionManual\CONEXION_MANUAL.Designer.cs">
       <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Configurations\Menu_of_configurations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Configurations\Menu_of_configurations.Designer.cs">
+      <DependentUpon>Menu_of_configurations.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ConexionManual\CONEXION_MANUAL.resx">
       <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Configurations\Menu_of_configurations.resx">
+      <DependentUpon>Menu_of_configurations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
@@ -262,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fecha_izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelConfiguracion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

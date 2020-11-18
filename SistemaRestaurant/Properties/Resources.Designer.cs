@@ -173,6 +173,16 @@ namespace SistemaRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo {
+            get {
+                object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foto__1_ {
             get {
                 object obj = ResourceManager.GetObject("foto (1)", resourceCulture);
@@ -266,6 +276,16 @@ namespace SistemaRestaurant.Properties {
         internal static System.Drawing.Bitmap nuclear {
             get {
                 object obj = ResourceManager.GetObject("nuclear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PanelConfiguracion {
+            get {
+                object obj = ResourceManager.GetObject("PanelConfiguracion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
