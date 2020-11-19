@@ -97,6 +97,12 @@
     <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Point_of_Sale\CantPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Point_of_Sale\CantPersons.Designer.cs">
+      <DependentUpon>CantPersons.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Point_of_Sale\PointSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Point_of_Sale\CantPersons.resx">
+      <DependentUpon>CantPersons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Point_of_Sale\PointSale.resx">
       <DependentUpon>PointSale.cs</DependentUpon>
