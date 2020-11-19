@@ -61,6 +61,12 @@
     <Compile Include="BOL\Lmodules.cs" />
     <Compile Include="BOL\Lpermission.cs" />
     <Compile Include="BOL\Lusers.cs" />
+    <Compile Include="GUI\Box\BoxOpening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Box\BoxOpening.Designer.cs">
+      <DependentUpon>BoxOpening.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ConexionManual\CONEXION_MANUAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Box\BoxOpening.resx">
+      <DependentUpon>BoxOpening.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ConexionManual\CONEXION_MANUAL.resx">
       <DependentUpon>CONEXION_MANUAL.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,5 +287,6 @@
   <ItemGroup>
     <None Include="Resources\PanelConfiguracion.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
