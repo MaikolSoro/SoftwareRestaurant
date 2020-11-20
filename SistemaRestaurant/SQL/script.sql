@@ -114,6 +114,24 @@ CREATE TABLE [dbo].[Group_of_Products](
 	[State] [varchar](50) NULL,
 	[State_of_icon] [varchar](50) NULL,
 )
+
+CREATE TABLE [dbo].[MovememtsBox](
+	[IdMovementsBox] [int] IDENTITY(1,1) NOT NULL,
+	[startDate] [datetime] NULL,
+	[EndDate] [datetime] NULL,
+	[income] [numeric](18, 2) NULL,
+	[egresos] [numeric](18, 2) NULL,
+	[VCash] [numeric](18, 2) NULL,
+	[VCredit] [numeric](18, 2) NULL,
+	[VCard] [numeric](18, 2) NULL,
+	[Iduser] [int] NULL,
+	[CashCalculated] [numeric](18, 2) NULL,
+	[ActualCash] [numeric](18, 2) NULL,
+	[CashDifference] [numeric](18, 2) NULL,
+	[IdBox] [int] NULL,
+	[State] [varchar](50) NULL,
+	[Initial Cash] [numeric](18, 2) NULL,
+)
 /*INSERTAR USUARIO*/
 CREATE PROC insert_Users
 
