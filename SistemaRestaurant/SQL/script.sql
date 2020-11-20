@@ -49,7 +49,9 @@ As
 update Users set State='ELIMINADO'
 WHERE IdUser=@IdUser
 
+
 /*EDITAR USUARIO*/
+
 CREATE PROC edit_User
 @IdUser As int,
 @Name As varchar(MAX),
@@ -71,3 +73,8 @@ Icon=@Icon,
 Email=@Email,
 Role=@Role
 Where IdUser=@IdUser
+
+create proc [dbo].[GetUserID]
+@Login varchar(max)
+as
+select IdUser  from Users where Login=@Login 
