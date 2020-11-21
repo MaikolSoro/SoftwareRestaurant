@@ -8,16 +8,18 @@ Icon IMAGE NULL,
 Email VARCHAR(max) NULL,
 Role VARCHAR(max) NULL,
 State VARCHAR(max) NULL
+CONSTRAINT PK_Users PRIMARY KEY(IdUser)
 )
 
 CREATE TABLE Permissions(
 	IdPermissions int IDENTITY(1,1) NOT NULL,
 	IdModule int NULL,
 	IdUser int NULL,
+	CONSTRAINT PK_Permissions PRIMARY KEY(IdPermissions)
 )
 
 CREATE TABLE Clients(
-	idclient int IDENTITY(1,1) NOT NULL,
+	Idclient int IDENTITY(1,1) NOT NULL,
 	Name varchar(max) NULL,
 	address varchar(max) NULL,
 	FiscalIndentificar varchar(max) NULL,
@@ -25,94 +27,110 @@ CREATE TABLE Clients(
 	State varchar(50) NULL,
 	residue numeric(18, 2) NULL,
 	document varchar(50) NULL,
+	CONSTRAINT PK_Clients PRIMARY KEY(Idclient)
 )
 
 CREATE TABLE Login(
 	Idsesion int IDENTITY(1,1) NOT NULL,
 	IdBox int NULL,
 	IdUser int NULL,
+	CONSTRAINT PK_Login PRIMARY KEY(Idsesion),
+	CONSTRAINT FK_Login_Box FOREIGN KEY(IdBox) REFERENCES Box(Id_Box),
+	CONSTRAINT FK_Login_user FOREIGN KEY(IdUser) REFERENCES Users(IdUser)
 	)
 
-	CREATE TABLE [dbo].[Tables](
-	[Id_table] [int] IDENTITY(1,1) NOT NULL,
-	[Table] [varchar](50) NULL,
-	[Id_salon] [int] NULL,
-	[life_state] [varchar](50) NULL,
-	[state_of_availability] [varchar](50) NULL,
+	CREATE TABLE Tables(
+	Id_table int IDENTITY(1,1) NOT NULL,
+	Board varchar(50) NULL,
+	Id_salon int NULL,
+	life_state varchar(50) NULL,
+	state_of_availability varchar(50) NULL,
+	CONSTRAINT PK_Tables PRIMARY KEY(Id_table),
+	CONSTRAINT FK_Tables_salon FOREIGN KEY(Id_salon) REFERENCES Salon(Id_salon)
 )
-CREATE TABLE [dbo].[Modules](
-	[IdModule] [int] IDENTITY(1,1) NOT NULL,
-	[Module] [varchar](max) NULL,
-)
-
-CREATE TABLE [dbo].[Salon](
-	[Id_salon] [int] IDENTITY(1,1) NOT NULL,
-	[Salon] [varchar](50) NULL,
-	[State] [varchar](50) NULL,
-
- )
-
- CREATE TABLE [dbo].[Box](
-	[Id_Box] [int] IDENTITY(1,1) NOT NULL,
-	[Description] [varchar](50) NULL,
-	[Theme] [varchar](50) NULL,
-	[Serial_PC] [varchar](max) NULL,
-	[State] [varchar](50) NULL,
-	[Type] [varchar](50) NULL,
-	[Path_to_backup_copies] [varchar](max) NULL,
-	[Last_backup_date] [varchar](50) NULL,
-	[Last_copy_date_date] [datetime] NULL,
-	[Frequency_of_copies] [int] NULL,
-	[Backup_State] [varchar](50) NULL,
+CREATE TABLE Modules(
+	IdModule int IDENTITY(1,1) NOT NULL,
+	Module varchar(max) NULL,
+	CONSTRAINT PK_Modules PRIMARY KEY(IdModule)
 )
 
- CREATE TABLE [dbo].[Sales](
-	[idsale] [int] IDENTITY(1,1) NOT NULL,
-	[idclient] [int] NULL,
-	[sale_date] [datetime] NULL,
-	[Numer_of_doc] [varchar](50) NULL,
-	[Total_amount] [numeric](18, 2) NULL,
-	[Payment_type] [varchar](50) NULL,
-	[State] [varchar](50) NULL,
-	[IVA] [numeric](18, 2) NULL,
-	[Voucher] [varchar](50) NULL,
-	[Id_usuario] [int] NULL,
-	[Payment_date] [varchar](50) NULL,
-	[Action] [varchar](50) NULL,
-	[residue] [numeric](18, 2) NULL,
-	[Pay_with] [numeric](18, 2) NULL,
-	[Porcentage_IVA] [numeric](18, 2) NULL,
-	[Id_box] [int] NULL,
-	[Card_Reference] [varchar](50) NULL,
-	[Turned] [numeric](18, 2) NULL,
-	[Cash] [numeric](18, 2) NULL,
-	[Credit] [numeric](18, 2) NULL,
-	[Card] [numeric](18, 2) NULL,
-	[Id_table] [int] NULL,
-	[Number_people] [int] NULL,
-	[Where_will_be_consumed] [varchar](50) NULL,
+ CREATE TABLE Salon(
+	Id_salon int IDENTITY(1,1) NOT NULL,
+	Salon varchar(50) NULL,
+	State varchar(50) NULL,
+	CONSTRAINT PK_Salon PRIMARY KEY(Id_salon)
 )
 
-CREATE TABLE [dbo].[Product](
-	[Id_Product] [int] IDENTITY(1,1) NOT NULL,
-	[Description] [varchar](50) NULL,
-	[Image] [image] NULL,
-	[Id_group] [int] NULL,
-	[Use_inventories] [varchar](50) NULL,
-	[Stock] [varchar](50) NULL,
-	[Sale_price] [numeric](18, 2) NULL,
-	[Stock_minimum] [numeric](18, 2) NULL,
-	[Purchase_price] [numeric](18, 2) NULL,
-	[State_image] [varchar](50) NULL,
+
+ CREATE TABLE Box(
+	Id_Box int IDENTITY(1,1) NOT NULL,
+	Description varchar(50) NULL,
+	Theme varchar(50) NULL,
+	Serial_PC varchar(max) NULL,
+	State varchar(50) NULL,
+	Type varchar(50) NULL,
+	Path_to_backup_copies varchar(max) NULL,
+	Last_backup_date varchar(50) NULL,
+	Last_copy_date_date datetime NULL,
+	Frequency_of_copies int NULL,
+	Backup_State varchar(50) NULL,
+	CONSTRAINT PK_Box PRIMARY KEY(Id_Box)
 )
 
-CREATE TABLE [dbo].[Group_of_Products](
-	[Idline] [int] IDENTITY(1,1) NOT NULL,
-	[Group] [varchar](50) NULL,
-	[Default] [varchar](50) NULL,
-	[Icon] [image] NULL,
-	[State] [varchar](50) NULL,
-	[State_of_icon] [varchar](50) NULL,
+ CREATE TABLE Sales(
+	idsale int IDENTITY(1,1) NOT NULL,
+	idclient int NULL,
+	sale_date datetime NULL,
+	Numer_of_doc varchar(50) NULL,
+	Total_amount numeric(18, 2) NULL,
+	Payment_type varchar(50) NULL,
+	State varchar(50) NULL,
+	IVA numeric(18, 2) NULL,
+	Voucher varchar(50) NULL,
+	Id_user int NULL,
+	Payment_date varchar(50) NULL,
+	Action varchar(50) NULL,
+	residue numeric(18, 2) NULL,
+	Pay_with numeric(18, 2) NULL,
+	Porcentage_IVA numeric(18, 2) NULL,
+	Id_box int NULL,
+	Card_Reference varchar(50) NULL,
+	Turned numeric(18, 2) NULL,
+	Cash numeric(18, 2) NULL,
+	Credit numeric(18, 2) NULL,
+	Card numeric(18, 2) NULL,
+	Id_table int NULL,
+	Number_people int NULL,
+	Where_will_be_consumed varchar(50) NULL,
+	CONSTRAINT PK_Sales PRIMARY KEY(Idsale),
+	CONSTRAINT FK_Sales_users FOREIGN KEY(Id_user) REFERENCES Users(IdUser),
+	CONSTRAINT FK_Sales_clients FOREIGN KEY(Idclient) REFERENCES Clients(Idclient),
+	CONSTRAINT FK_Sales_box FOREIGN KEY(Id_box) REFERENCES Box(Id_Box),
+	CONSTRAINT FK_Sales_table FOREIGN KEY(Id_table) REFERENCES Tables(Id_table)
+)
+
+CREATE TABLE Group_of_Products(
+	Idline int IDENTITY(1,1) NOT NULL,
+	PGroup varchar(50) NULL,
+	ByDefault varchar(50) NULL,
+	Icon image NULL,
+	State varchar(50) NULL,
+	State_of_icon varchar(50) NULL,
+	CONSTRAINT PK_group_of_Products PRIMARY KEY(Idline)
+)
+CREATE TABLE Product(
+	Id_Product int IDENTITY(1,1) NOT NULL,
+	Description varchar(50) NULL,
+	Image image NULL,
+	Id_group int NULL,
+	Use_inventories varchar(50) NULL,
+	Stock varchar(50) NULL,
+	Sale_price numeric(18, 2) NULL,
+	Stock_minimum numeric(18, 2) NULL,
+	Purchase_price numeric(18, 2) NULL,
+	State_image varchar(50) NULL,
+	CONSTRAINT PK_Product PRIMARY KEY(Id_Product),
+	CONSTRAINT FK_Product_group FOREIGN KEY(Id_group) REFERENCES Group_of_Products(Idline)
 )
 
 CREATE TABLE [dbo].[MovememtsBox](
