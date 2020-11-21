@@ -295,3 +295,56 @@ create proc [dbo].[insertLogin]
 as
 insert into Login 
 values(@idbox ,@iduser)
+
+create proc [dbo].[Paginate_groups]
+@From int,
+@Until int
+as
+BEGIN
+SET NOCOUNT ON;
+select
+Idline, 
+Group,
+Icon ,
+Icon_state  
+from 
+(Select
+Idline, 
+Group,
+Icon ,
+Icon_state ,
+ROW_NUMBER() Over (Order By Idline) 'Numero_de_fila' 
+From Group_of_Products as Paginate
+Where (Paginate.Row_Number>=@From ) and (Paginate.Row_Number <=@Until ) END
+
+CREATE proc [dbo].[paginate_Products_by_group]
+@From INT,
+@Until INT,
+@id_group int
+AS
+BEGIN
+SET NOCOUNT ON;
+SELECT
+Id_Product,
+Description,
+Image,
+Sale_price,
+State_image,
+Id_group
+FROM
+(SELECT
+Id_Product,
+Description,
+Image,
+Sale_price,
+State_image,
+Product.Id_group ,
+ROW_NUMBER() OVER (ORDER BY Idline) 'Numero_de_fila'
+FROM
+Product INNER JOIN Group_of_Products on
+Group_of_Products.Idline=Product.Id_group
+
+) AS Paginate
+WHERE
+(Paginate.Row_Number >= @From)AND (Paginate.Row_Number<= @Until ) and Paginate.Id_group  =@id_group
+END
