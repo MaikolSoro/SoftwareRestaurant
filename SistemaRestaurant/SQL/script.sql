@@ -132,6 +132,15 @@ CREATE TABLE [dbo].[MovememtsBox](
 	[State] [varchar](50) NULL,
 	[Initial Cash] [numeric](18, 2) NULL,
 )
+
+CREATE TABLE [dbo].[Table_Properties](
+	[Id_properties] [int] IDENTITY(1,1) NOT NULL,
+	[x] [int] NULL,
+	[y] [int] NULL,
+	[Letter_size] [int] NULL,
+
+)
+
 /*INSERTAR USUARIO*/
 CREATE PROC insert_Users
 
@@ -348,3 +357,36 @@ Group_of_Products.Idline=Product.Id_group
 WHERE
 (Paginate.Row_Number >= @From)AND (Paginate.Row_Number<= @Until ) and Paginate.Id_group  =@id_group
 END
+
+create proc [dbo].[edit_table]
+
+@table as varchar(50)
+,@id_table as int
+as
+if EXISTS (SELECT Tables FROM Tables  where (Table  = @table and Id_table  <>@Id_table ))
+
+RAISERROR ('Ya Existe una mesa con este Nombre, POR FAVOR INGRESE DE NUEVO', 16,1)
+else
+update Tables set Table=@table
+where Id_table=@id_table 
+
+
+create proc [dbo].[insert_table]
+@table varchar(50),
+@idsalon int
+AS
+declare @life_state varchar(50)
+declare @state_of_availability varchar(50)
+set @life_state ='ACTIVO'
+set @state_of_availability = 'LIBRE'
+if EXISTS(select Table  from Tables  where Table= @table and Table <>'NULO')
+RAISERROR('YA EXISTE UNA MESA CON ESE NOMBRE, ingrese de nuevo', 16,1)
+else
+insert into Tables values (@table, @idsalon ,@life_state , @state_of_availability )
+
+CREATE PROC [dbo].[insert_Modules]
+@Module As varchar(MAX)
+As
+INSERT INTO Modules
+Values (
+@Module)
