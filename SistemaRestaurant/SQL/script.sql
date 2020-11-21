@@ -390,3 +390,28 @@ As
 INSERT INTO Modules
 Values (
 @Module)
+
+
+create proc [dbo].[insertPropertiesTables]
+as
+declare @x int
+declare @y int
+declare @lettersize int
+set @x=136
+set @y=110
+set @lettersize=10
+insert into Properties_of_tables 
+values(@x,@y,@lettersize)
+
+create proc [dbo].[show_recently_entered_salon_id]
+@Salon as varchar(50)
+AS
+select Id_salon from Salon
+where Salon= @Salon
+
+CREATE proc [dbo].[show_tables_por_salon]
+@id_salon int
+AS
+select Tables.*,Table_Properties.*  from Tables inner join Salon on Salon.Id_salon = Tables.Id_salon  
+cross join Table_Properties
+wHERE Tables.Id_salon = @id_salon 
